@@ -4,9 +4,9 @@ end
 class Book
   attr_reader :pages, :index
 
-  def initialize
-    @pages = []
-    @index = {}
+  def initialize(pages=[])
+    @pages = pages
+    @index = pages.each_with_object({}) { |page, index| index[page.number] = page }
   end
 
   def page(number)
