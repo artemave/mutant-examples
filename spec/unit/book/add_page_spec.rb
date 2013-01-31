@@ -12,9 +12,4 @@ describe Book, '#add_page' do
     book.add_page(page)
     expect(book.pages).to include(page)
   end
-
-  it 'should add page to book index' do
-    book.add_page(page)
-    expect(book.index).to include(1 => page)
-  end
 end

@@ -2,7 +2,7 @@ class Page < Struct.new(:number, :content)
 end
 
 class Book
-  attr_reader :pages, :index
+  attr_reader :pages
 
   def initialize(pages=[])
     @pages = pages
